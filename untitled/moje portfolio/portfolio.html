@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="portfolio.styly.css">
+</head>
+<body>
+<header>
+    <h1>Tadeáš Gajdošík</h1>
+    <button onclick="scrollToSection(1)">O mně</button>
+    <button onclick="scrollToSection(2)">Moje Práce</button>
+    <button onclick="scrollToSection(3)">Nabídka</button>
+</header>
+<main>
+    <section id="section1" class="section">
+        <h2>O mně</h2>
+        <p>Jsem 15 letý student na SŠ Baltaci v oboru IT.</p>
+    </section>
+    <section id="section2" class="section">
+        <h2>Moje Práce</h2>
+        <p>Zde můžete vidět mé předchozí práce.</p>
+    </section>
+    <section id="section3" class="section">
+        <h2>Co vám můžu nabídnout?</h2>
+        <p>Zde můžete vidět mé nabídky práce a jejich ceny.</p>
+    </section>
+</main>
+<footer>
+    <p>&copy; 2024 Gajdošík Tadeáš</p>
+</footer>
+
+
+<script>
+    let lastScrollTop = 0;
+
+    window.addEventListener("scroll", function() {
+        let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+        if (currentScroll > lastScrollTop) {
+            // Scroll down
+            document.getElementById("header").classList.add("hide");
+        } else {
+            // Scroll up
+            document.getElementById("header").classList.remove("hide");
+        }
+        lastScrollTop = currentScroll;
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pizzeria</title>
+    <link rel="stylesheet" href="flexbox.pizza.styles.css">
+</head>
+<body>
+
+<header>
+    <h1>Pizza Elegance</h1>
+    <p>Indulge in Exquisite Pizzas Crafted with Passion and Love. Experience the Perfect Blend of Flavors and Freshness.</p>
+</header>
+<h1 class="Main">MENU</h1>
+<div class="menu-container">
+    <div class="menu-item" onclick="toggleInfo(this)">
+        <img src="img/pepperoni.pizza.webp" alt="Pepperoni Pizza" class="pizza-image" height="200px" width="200px">
+        <h2>Pepperoni Pizza</h2>
+        <p>Classic pepperoni pizza with mozzarella cheese and tomato sauce.</p>
+        <div class="pizza-info">
+            <p>Ingredients: Pepperoni, Mozzarella, Tomato Sauce</p>
+            <p>Price: $12.99</p>
+            <a href="pizza_info/pizza_info_pepperoni.html" class="learn-more-button">Learn More</a>
+        </div>
+    </div>
+
+    <div class="menu-item" onclick="toggleInfo(this)">
+        <img src="img/vegetarian_pizza.jpg" class="pizza-image" alt="vegetarian pizza" height="200px" width="200px"/>
+        <h2>Vegetarian Pizza</h2>
+        <p>Fresh vegetables, olives, and feta cheese on a crispy crust.</p>
+
+        <div class="pizza-info">
+            <p>Ingredients: Mixed Vegetables, Olives, Feta Cheese</p>
+            <p>Price: $14.99</p>
+            <a href="pizza_info/pizza_info_vegetarian.html" class="learn-more-button">Learn More</a>
+
+        </div>
+    </div>
+    <div class="menu-item" onclick="toggleInfo(this)">
+        <img src="img/quattro_formagi.jpg" class="pizza-image" alt="quattro formagi" height="200px" width="200px"/>
+        <h2>Quattro Formagi</h2>
+                <p>Easy and delicious 4 cheese pizza with mozarella, eidam, gouda, goat cheese, fresh tomatoes and basil.</p>
+
+                <div class="pizza-info">
+                    <p>Ingredients: Fresh Tomatoes, Mozzarella, Basil</p>
+                    <p>Price: $11.99</p>
+                    <a href="pizza_info/pizza_info_quattro.html" class="learn-more-button">Learn More</a>
+                </div>
+
+</div>
+    <script>
+        function toggleInfo(element) {
+            const pizzaInfo = element.querySelector('.pizza-info');
+            pizzaInfo.classList.toggle('show-info');
+        }
+    </script>
+</body>
+</html>

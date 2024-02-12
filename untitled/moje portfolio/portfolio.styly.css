@@ -1,0 +1,64 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+    color: black; /* Set text color to black */
+}
+body {
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+}
+header, footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    box-shadow: 0px 0px 10px black;
+}
+main {
+    height: calc(100% - 120px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background-color: white; /* Set background color of main to white */
+}
+.section {
+    flex: 1;
+    width: 100%;
+    background-color: white; /* Set background color of sections to white */
+    color: black; /* Set text color of sections to black */
+    padding: 20px;
+    text-align: center;
+    opacity: 0.7; /* Set initial opacity to 0.7 */
+    transform: translateY(0); /* Set initial transform to none */
+    border-bottom: 1px solid black; /* Adjust border color */
+    transition: opacity 0.5s, transform 0.5s;
+}
+.section:hover {
+    opacity: 1;
+    transform: translateY(-5px); /* Move section up slightly on hover */
+}
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+header button {
+    background-color: black;
+    color: white;
+    border: 1px solid white;
+    padding: 8px 16px;
+    margin: 0 10px;
+    cursor: pointer;
+}
+header button:hover {
+    background-color: white;
+    color: black;
+}

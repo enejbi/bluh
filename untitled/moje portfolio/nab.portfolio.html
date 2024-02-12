@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>nabber</title>
+    <link rel="stylesheet" href="portfolio.styly.css">
+</head>
+<body>
+<header id="header">
+    <h1>nab</h1>
+    <button onclick="scrollToSection('section1')">About me</button>
+    <button onclick="scrollToSection('section2')">My works</button>
+    <button onclick="scrollToSection('section3')">Offers</button>
+</header>
+<main>
+    <section id="section1" class="section">
+        <h2>About me</h2>
+        <p>I'm 15 years old studying programming, 2D and 3D graphics and more.</p>
+    </section>
+    <section id="section2" class="section">
+        <h2>My Works</h2>
+        <p>Here are some of my works I made in the past 6 months.</p>
+    </section>
+    <section id="section3" class="section">
+        <h2>What can I offer?</h2>
+        <p>If you like some of my works and want your own website, don't hesitate to DM me on my Discord!</p>
+    </section>
+</main>
+<footer id="footer">
+    <p>&copy; 2024 nab</p>
+</footer>
+
+<script>
+    let lastScrollTop = 0;
+    const elementsToHide = [document.getElementById("header"), document.getElementById("footer")];
+
+    window.addEventListener("scroll", function() {
+        let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+        if (currentScroll > lastScrollTop) {
+            // Scroll down
+            elementsToHide.forEach(element => element.classList.add("hide"));
+        } else {
+            // Scroll up
+            elementsToHide.forEach(element => element.classList.remove("hide"));
+        }
+        lastScrollTop = currentScroll;
+    });
+
+    function scrollToSection(sectionId) {
+        const section = document.getElementById(sectionId);
+        if (section) {
+            section.scrollIntoView({ behavior: 'smooth' });
+        } else {
+            console.error('Section not found');
+        }
+    }
+</script>
+</body>
+</html>
